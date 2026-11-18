@@ -1,0 +1,30 @@
+// Create an Array of Subjects
+var subjects = ["Swift", "UIKit", "SwiftUI"]
+subjects.append("Networking")
+print(subjects)                         // ["Swift", "UIKit", "SwiftUI", "Networking"]
+subjects.insert("Testing", at: 1)
+print(subjects)                         // ["Swift", "Testing", "UIKit", "SwiftUI", "Networking"]
+subjects.remove(at: 2)
+print(subjects)                         // ["Swift", "Testing", "SwiftUI", "Networking"]
+subjects.sort()
+print(subjects)                         // ["Networking", "Swift", "SwiftUI", "Testing"]
+
+// Create a Set of Registered Students
+var registered: Set = ["Vignesh", "Arun", "Kumar"]
+registered.insert("Ravi")
+registered.insert("Ravi")
+print(registered)                           // ["Kumar", "Ravi", "Arun", "Vignesh"]
+print(registered.count)                     // 4
+
+// Create a Dictionary of Student Marks
+var marks: [String: Int] = [
+    "Vignesh": 85,
+    "Arun": 90,
+    "Kumar": 75
+]
+marks["Ravi"] = 88
+print(marks)                                   // ["Ravi": 88, "Kumar": 75, "Arun": 90, "Vignesh": 85]
+marks["Arun"] = 95
+print(marks)                                   // ["Ravi": 88, "Kumar": 75, "Arun": 95, "Vignesh": 85]
+print(marks["Rahul"])                          // nil
+
