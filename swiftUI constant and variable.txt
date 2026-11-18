@@ -1,0 +1,20 @@
+print("Hello, World!")
+var firstName:String="vignesh"      //with string 
+print(firstName)
+var a:Int=24;                       //with datatype
+print(a)
+var b=10                            //without datatype
+print(b)
+var c="swift"
+print(c)
+firstName="program"                //in this we cannot change the datatype but can change the value
+print(firstName)
+var middleName,lastName:String
+middleName="easy"
+lastName="learning"
+print(middleName)
+print(lastName)
+var name:String="practise",number:Float=60.2
+print(name)
+print(number)
+
