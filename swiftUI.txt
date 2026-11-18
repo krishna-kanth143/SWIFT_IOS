@@ -1,0 +1,19 @@
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        Image(systemName: "globe")
+            .imageScale(.large)
+        Text("Vignesh P")
+            .font(.largeTitle)
+            .fontWeight(.bold)
+        Text("B Tech")
+            .font(.subheadline)
+            .fontWeight(.bold)
+            .foregroundStyle(.secondary)
+        Text("Artificial Intelligence And Data Science")
+        Button("Add Course") {
+        }
+        .padding()
+    }
+}
