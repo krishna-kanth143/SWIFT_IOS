@@ -1,0 +1,48 @@
+import SwiftUI
+struct ContentView: View {
+    let itemPrice = 450.0
+    let quantity = 3
+    let hasCoupon = true
+    var subtotal: Double {
+        itemPrice * Double(quantity)
+    }
+    var discount: Double {
+        (hasCoupon && subtotal > 1000) ? subtotal * 0.10 : 0.0
+    }
+    var discountedAmount: Double {
+        subtotal - discount
+    }
+    var gst: Double {
+        discountedAmount * 0.18
+    }
+    var total: Double {
+        discountedAmount + gst
+    }
+    var body: some View {
+        VStack(spacing: 15) {
+            Text("Restaurant Bill")
+                .font(.largeTitle)
+                .bold()
+            Text("Item Price: ₹\(itemPrice)")
+            Text("Quantity: \(quantity)")
+            Text("Subtotal: ₹\(subtotal)")
+            Text("Discount: ₹\(discount)")
+            Text("GST: ₹\(gst)")
+            Divider()
+            Text("Total Bill: ₹\(total)")
+                .font(.title2)
+                .bold()
+            Text("Each Person: ₹\(total / 4)")
+                .foregroundColor(.green)
+        }
+        .padding()
+    }
+}
+#Preview {
+    ContentView()
+}
+
+
+
+
+
